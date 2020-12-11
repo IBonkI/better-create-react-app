@@ -1,16 +1,13 @@
-const React = require('react');
-const ReactDOM = ('react-dom')
-require ('index.css')
-
-function App() {
-    return(
-        <div>
-            Hello World!
-        </div>
+import React from 'react'
+import { render } from 'react-dom'
+import './index.css'
+export const App = () => {
+    return (
+        <>
+        <div className="test">Created React App without create-react-app?</div>
+        <h1 className="test">Hell yeah !</h1>
+        </>
     )
 }
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-)
+render(<App />, document.getElementById('app'));
