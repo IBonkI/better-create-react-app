@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "trying to setup a react application without create-react-app",
   "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "webpack",
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
@@ -16,5 +24,20 @@
   "bugs": {
     "url": "https://github.com/IBonkI/better-create-react-app/issues"
   },
-  "homepage": "https://github.com/IBonkI/better-create-react-app#readme"
+  "homepage": "https://github.com/IBonkI/better-create-react-app#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0"
+  }
 }
